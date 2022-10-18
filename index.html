@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/dotnet-evergreen/assets/css/style.css?v=09267998de9cabd0d458f11a1bcd60ed71222556">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>dotnet-evergreen | A dotnet tool runner that automatically updates the tool package before and while running it</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="dotnet-evergreen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A dotnet tool runner that automatically updates the tool package before and while running it" />
+<meta property="og:description" content="A dotnet tool runner that automatically updates the tool package before and while running it" />
+<meta property="og:site_name" content="dotnet-evergreen" />
+<script type="application/ld+json">
+{"@type":"WebSite","url":"/dotnet-evergreen/","headline":"dotnet-evergreen","description":"A dotnet tool runner that automatically updates the tool package before and while running it","name":"dotnet-evergreen","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/devlooped/dotnet-evergreen">View on GitHub</a>
+
+          <h1 id="project_title">dotnet-evergreen</h1>
+          <h2 id="project_tagline">A dotnet tool runner that automatically updates the tool package before and while running it</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="-dotnet-evergreen"><img src="https://raw.githubusercontent.com/devlooped/dotnet-evergreen/main/assets/img/icon.png" alt="Icon" /> dotnet-evergreen</h1>
+
+<p><a href="https://www.nuget.org/packages/dotnet-evergreen"><img src="https://img.shields.io/nuget/v/dotnet-evergreen.svg?color=royalblue" alt="Version" /></a> <a href="https://www.nuget.org/packages/dotnet-evergreen"><img src="https://img.shields.io/nuget/dt/dotnet-evergreen.svg?color=green" alt="Downloads" /></a> <a href="https://github.com/devlooped/dotnet-evergreen/blob/main/license.txt"><img src="https://img.shields.io/github/license/devlooped/dotnet-evergreen.svg?color=blue" alt="License" /></a> <a href="https://github.com/devlooped/dotnet-evergreen/actions"><img src="https://github.com/devlooped/dotnet-evergreen/workflows/build/badge.svg?branch=main" alt="Build" /></a></p>
+
+<p>A dotnet global tool runner that automatically updates the tool package before running it, 
+checks for updates while it runs, and restarts the tool as needed after updating it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet evergreen
+  Run an evergreen version of a tool
+
+Usage:
+  dotnet evergreen [options] [&lt;tool&gt; [&lt;args&gt;...]]
+
+Arguments:
+  &lt;tool&gt;  Package Id of tool to run.
+  &lt;args&gt;  Additional arguments and options supported by the tool
+
+Options:
+  -s, --source &lt;source&gt;      NuGet feed to check for updates. [default: https://api.nuget.org/v3/index.json]
+  --singleton                Ensure a single tool process is running.
+  -i, --interval &lt;interval&gt;  Time interval in seconds for the update checks. [default: 5]
+  -f, --force                Stop all running tool processes to apply updates. [default: True]
+  -p, --prerelease           Whether to include pre-release packages. [default: False]
+  -q, --quiet                Do not display any informational messages.
+  -?, -h, --help             Show help and usage information
+  --version                  Show version information
+
+</code></pre></div></div>
+
+<p>Features:</p>
+
+<ul>
+  <li>Automatically exits if the tool also runs to completion</li>
+  <li>Forwards exit code from the tool</li>
+  <li>Restarts tool as needed to apply updates</li>
+  <li>Stops all other tool running processes so updating succeeds (can be opted out with <code class="language-plaintext highlighter-rouge">-f=false</code>)</li>
+  <li>Ensures a single tool is running (<code class="language-plaintext highlighter-rouge">--singleton</code> option)</li>
+  <li>Passes all tool options verbatim (except for <code class="language-plaintext highlighter-rouge">evergreen</code> options, specified <em>before</em> the tool argument)</li>
+  <li>Automatically discovers tool <em>command</em> when it doesn’t match the tool <em>package id</em> 
+(i.e. <a href="https://www.nuget.org/packages/dotnet-eventgrid">dotnet-eventgrid</a> &gt; <code class="language-plaintext highlighter-rouge">eventgrid</code>).</li>
+  <li>
+    <p>Supports <a href="https://dotnetconfig.org">dotnetconfig</a> for options. Example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[evergreen]
+  interval = 5
+  source = https://myfeed.com/index.json 
+  singleton = true
+  prerelease = true
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; dotnet evergreen dotnet-echo
+&gt; dotnet evergreen dotnet-tor
+</code></pre></div></div>
+
+<!-- include https://github.com/devlooped/sponsors/raw/main/footer.md -->
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">dotnet-evergreen maintained by <a href="https://github.com/devlooped">devlooped</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

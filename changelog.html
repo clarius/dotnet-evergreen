@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/dotnet-evergreen/assets/css/style.css?v=09267998de9cabd0d458f11a1bcd60ed71222556">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Changelog | dotnet-evergreen</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Changelog" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A dotnet tool runner that automatically updates the tool package before and while running it" />
+<meta property="og:description" content="A dotnet tool runner that automatically updates the tool package before and while running it" />
+<meta property="og:site_name" content="dotnet-evergreen" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/dotnet-evergreen/changelog.html","headline":"Changelog","description":"A dotnet tool runner that automatically updates the tool package before and while running it","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/devlooped/dotnet-evergreen">View on GitHub</a>
+
+          <h1 id="project_title">dotnet-evergreen</h1>
+          <h2 id="project_tagline">A dotnet tool runner that automatically updates the tool package before and while running it</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="changelog">Changelog</h1>
+
+<h2 id="v131-2022-05-04"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.3.1">v1.3.1</a> (2022-05-04)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/v1.2.1...v1.3.1">Full Changelog</a></p>
+
+<p>:sparkles: Implemented enhancements:</p>
+
+<ul>
+  <li>Add support for installing prerelease versions <a href="https://github.com/devlooped/dotnet-evergreen/issues/33">#33</a></li>
+  <li>Failure to check updates causes the tool to exit <a href="https://github.com/devlooped/dotnet-evergreen/issues/30">#30</a></li>
+</ul>
+
+<p>:hammer: Other:</p>
+
+<ul>
+  <li>Automatically exit dotnet-evergreen when tool exits <a href="https://github.com/devlooped/dotnet-evergreen/issues/39">#39</a></li>
+</ul>
+
+<p>:twisted_rightwards_arrows: Merged:</p>
+
+<ul>
+  <li>Automatically exit dotnet-evergreen when tool exits <a href="https://github.com/devlooped/dotnet-evergreen/pull/40">#40</a> (@kzu)</li>
+  <li>Add support for installing prerelease versions <a href="https://github.com/devlooped/dotnet-evergreen/pull/34">#34</a> (@kzu)</li>
+</ul>
+
+<h2 id="v121-2022-03-07"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.2.1">v1.2.1</a> (2022-03-07)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/v1.2.0...v1.2.1">Full Changelog</a></p>
+
+<p>:twisted_rightwards_arrows: Merged:</p>
+
+<ul>
+  <li>Catch exceptions and warn on update check failure <a href="https://github.com/devlooped/dotnet-evergreen/pull/31">#31</a> (@kzu)</li>
+</ul>
+
+<h2 id="v120-2022-03-06"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.2.0">v1.2.0</a> (2022-03-06)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/v1.1.0...v1.2.0">Full Changelog</a></p>
+
+<p>:sparkles: Implemented enhancements:</p>
+
+<ul>
+  <li>Trim tool size by removing explicit .net6 <a href="https://github.com/devlooped/dotnet-evergreen/issues/28">#28</a></li>
+  <li>Target latest supported .NET runtimes: 3.1, 5.0 and 6.0 <a href="https://github.com/devlooped/dotnet-evergreen/issues/27">#27</a></li>
+  <li>Drop .netcore 2.1 <a href="https://github.com/devlooped/dotnet-evergreen/issues/26">#26</a></li>
+</ul>
+
+<p>:twisted_rightwards_arrows: Merged:</p>
+
+<ul>
+  <li>Drop net6 since net5 can run on net6 runtime <a href="https://github.com/devlooped/dotnet-evergreen/pull/29">#29</a> (@kzu)</li>
+</ul>
+
+<h2 id="v110-2021-08-18"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.1.0">v1.1.0</a> (2021-08-18)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/v1.0.4...v1.1.0">Full Changelog</a></p>
+
+<p>:sparkles: Implemented enhancements:</p>
+
+<ul>
+  <li>Allow specifying a tool should be a singleton when run <a href="https://github.com/devlooped/dotnet-evergreen/issues/15">#15</a></li>
+  <li>If tool to update is running, update fails and evergreen exits <a href="https://github.com/devlooped/dotnet-evergreen/issues/14">#14</a></li>
+</ul>
+
+<h2 id="v104-2021-08-17"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.0.4">v1.0.4</a> (2021-08-17)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/v1.0.3...v1.0.4">Full Changelog</a></p>
+
+<p>:bug: Fixed bugs:</p>
+
+<ul>
+  <li>Usage of  local source cache prevents accurate update checks <a href="https://github.com/devlooped/dotnet-evergreen/issues/13">#13</a></li>
+</ul>
+
+<h2 id="v103-2021-07-24"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.0.3">v1.0.3</a> (2021-07-24)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/v1.0.2...v1.0.3">Full Changelog</a></p>
+
+<p>:sparkles: Implemented enhancements:</p>
+
+<ul>
+  <li>Show progress while installing/updating tools <a href="https://github.com/devlooped/dotnet-evergreen/issues/7">#7</a></li>
+</ul>
+
+<h2 id="v102-2021-07-24"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.0.2">v1.0.2</a> (2021-07-24)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/v1.0.1...v1.0.2">Full Changelog</a></p>
+
+<p>:sparkles: Implemented enhancements:</p>
+
+<ul>
+  <li>When installing/updating, don’t use cache <a href="https://github.com/devlooped/dotnet-evergreen/issues/6">#6</a></li>
+</ul>
+
+<p>:bug: Fixed bugs:</p>
+
+<ul>
+  <li>Package source not used when installing/updating <a href="https://github.com/devlooped/dotnet-evergreen/issues/5">#5</a></li>
+</ul>
+
+<p>:hammer: Other:</p>
+
+<ul>
+  <li>Video of dotnet-evergreen in action <a href="https://github.com/devlooped/dotnet-evergreen/issues/4">#4</a></li>
+</ul>
+
+<h2 id="v101-2021-07-21"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.0.1">v1.0.1</a> (2021-07-21)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/v1.0.0...v1.0.1">Full Changelog</a></p>
+
+<p>:sparkles: Implemented enhancements:</p>
+
+<ul>
+  <li>Stop child process silently <a href="https://github.com/devlooped/dotnet-evergreen/issues/3">#3</a></li>
+</ul>
+
+<p>:bug: Fixed bugs:</p>
+
+<ul>
+  <li>Add missing repository information to package <a href="https://github.com/devlooped/dotnet-evergreen/issues/2">#2</a></li>
+</ul>
+
+<h2 id="v100-2021-07-21"><a href="https://github.com/devlooped/dotnet-evergreen/tree/v1.0.0">v1.0.0</a> (2021-07-21)</h2>
+
+<p><a href="https://github.com/devlooped/dotnet-evergreen/compare/e24711c6b7dff84d1f75ce3eca12296d36197096...v1.0.0">Full Changelog</a></p>
+
+<p>* <em>This Changelog was automatically generated by <a href="https://github.com/github-changelog-generator/github-changelog-generator">github_changelog_generator</a></em></p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">dotnet-evergreen maintained by <a href="https://github.com/devlooped">devlooped</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
